@@ -5,7 +5,7 @@ using System.Web.Http;
 
 namespace RestaurantAPI
 {
-    public static class WebApiConfig
+    public static class RestaurantApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
