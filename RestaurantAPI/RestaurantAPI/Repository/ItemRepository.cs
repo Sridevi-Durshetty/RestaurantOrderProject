@@ -7,33 +7,33 @@ using System.Web;
 
 namespace RestaurantAPI.Repository
 {
-    public class CustomerRepository
+    public class ItemRepository
     {
         private RestaurantDBContext objRestaurantContext = new RestaurantDBContext();
 
         /// <summary>
         /// Default connected to SQL DB
         /// </summary>
-        public CustomerRepository() { }
+        public ItemRepository() { }
 
-        public IEnumerable<Customer> GetCustomers()
+        public IEnumerable<Item> GetItems()
         {
-            return objRestaurantContext.custEntity.Select(x => x);
+            return objRestaurantContext.itemEntity;
         }
 
-        public Customer GetCustomerById(int custid)
+        public Item GetItemById(int itemid)
         {
-            return objRestaurantContext.custEntity.Find(custid);
+            return objRestaurantContext.itemEntity.Find(itemid);
         }
 
-        public void CustomerDispose()
+        public void ItemDispose()
         {
             objRestaurantContext.Dispose();
         }
 
         private bool ItemExists(int id)
         {
-            return objRestaurantContext.custEntity.Count(e => e.CustomerId == id) > 0;
+            return objRestaurantContext.itemEntity.Count(e => e.ItemId == id) > 0;
         }
 
 
