@@ -1,0 +1,23 @@
+* src
++ -- * app
+    + -- *  orders
+        | - orders.component.ts | .html | .css
+        + -- * order
+            | - order.component.ts | .html | .css
+        + -- * order-items
+            | - order-items.component.ts | .html | .css
+    + -- * shared
+        + -- * models
+            | - customer.model.ts
+            | - order.model.ts
+            | - order-item.model.ts
+            | - item.model.ts
+        + -- * services
+            | - customer.service.ts
+            | - order.service.ts
+            | - item.service.ts
+    | - app.module.ts
+
++ -- * environments
+      | - environment.ts
+| - index.html

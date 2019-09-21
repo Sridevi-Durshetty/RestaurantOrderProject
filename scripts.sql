@@ -22,4 +22,12 @@ select * from items
 --INSERT INTO [dbo].[Orders]([OrderNo] ,[PaymentMethod] ,[GrandTotal] ,[CustomerId])
 --     VALUES ('ORD123','Cash','2000',1)
 
+select * from Orders
 
+SELECT 
+    [Extent1].[OrderId] AS [OrderId], 
+    [Extent1].[OrderNo] AS [OrderNo], 
+    [Extent1].[PaymentMethod] AS [PaymentMethod], 
+    [Extent1].[GrandTotal] AS [GrandTotal], 
+    [Extent1].[CustomerId] AS [CustomerId]
+    FROM [dbo].[Orders] AS [Extent1]
